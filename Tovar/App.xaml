@@ -1,0 +1,28 @@
+﻿<Application x:Class="Tovar.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Tovar"
+             StartupUri="View\AuthorizationWindow.xaml">
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="MainColor" Color="DarkGoldenrod"/>
+        <SolidColorBrush x:Key="SecondColor" Color="LightPink"/>
+        <FontFamily x:Key="MainFontFamily">comic sans ms</FontFamily>
+
+        <Style TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource SecondColor}"/>
+        </Style>
+
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="{StaticResource MainFontFamily}"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="4 2"/>
+            <Setter Property="Margin" Value="4"/>            
+            <Setter Property="Background" Value="{StaticResource MainColor}"/>            
+        </Style>
+        
+    </Application.Resources>
+</Application>

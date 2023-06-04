@@ -1,0 +1,33 @@
+﻿<Window x:Class="Tovar.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tovar.View"
+        xmlns:core="clr-namespace:Tovar.Core"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Border/>
+        
+        <TextBlock
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="6"
+            x:Name="UserName">
+            <Run Text="Имя"/>
+            <Run Text="{Binding Source={x:Static core:CurrentUserSingleton.CurrentUser}, Path=FirstName}"/>
+            <LineBreak/>
+            <Run Text="Фамилия"/>
+            <Run Text="{Binding Source={x:Static core:CurrentUserSingleton.CurrentUser}, Path=LastName}"/>
+            <LineBreak/>
+            <Run Text="Отчество"/>
+            <Run Text="{Binding Source={x:Static core:CurrentUserSingleton.CurrentUser}, Path=fatherName}"/>
+        </TextBlock>
+    </Grid>
+</Window>

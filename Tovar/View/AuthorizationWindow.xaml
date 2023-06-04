@@ -1,0 +1,36 @@
+﻿<Window x:Class="Tovar.View.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tovar.View"
+        xmlns:viewmodel="clr-namespace:Tovar.ViewModel"
+        xmlns:components="clr-namespace:Tovar.Components"
+        mc:Ignorable="d"
+        Title="AuthorizationWindow" Height="500" Width="350">
+    <Window.DataContext>
+        <viewmodel:AuthorizationViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="/Assets/Images/logo.png" Width="180" Margin="0 20"/>
+
+        <StackPanel Grid.Row="1" Width="250" Orientation="Vertical" >
+            <TextBlock Text="Логин"/>
+            <TextBox Text="{Binding Path=Login, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="25"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Width="250" Orientation="Vertical" >
+            <TextBlock Text="Пароль"/>
+            <components:BindablePaswordBox Password="{Binding Path=Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="25"/>
+            <Button Content="Войти" Command="{Binding Path=LoginCommand}" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

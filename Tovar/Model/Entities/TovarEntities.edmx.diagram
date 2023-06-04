@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="abd22de42b0741bf8758225599a10785" Name="Diagram1">
+        <EntityTypeShape EntityType="TovarModel.City" Width="1.5" PointX="1.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.Manufacturers" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.MeasureUnits" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.OrderedProducts" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.OrderPickUpPoints" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.Orders" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.OrderStatus" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.Products" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.ProductType" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.Suppliers" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.UserRoles" Width="1.5" PointX="1.5" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TovarModel.Users" Width="1.5" PointX="0.75" PointY="23.625" IsExpanded="true" />
+        <AssociationConnector Association="TovarModel.FK_OrderPickUpPoints_City" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Products_Manufacturers" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Products_MeasureUnits" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_OrderedProducts_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_OrderedProducts_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Orders_OrderPickUpPoints" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Orders_OrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Products_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Products_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="TovarModel.FK_Users_UserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
